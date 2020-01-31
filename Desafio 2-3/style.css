@@ -16,11 +16,11 @@ body {
     background: #282a36;
     font-family: roboto;
     color: white;
-    box-sizing: content-box;
 }
 
-body::-webkit-scrollbar {
-    display: none;    
+body::-webkit-scrollbar { 
+    visibility: hidden;
+    display: none;
 }
 
 .footer {
@@ -85,6 +85,7 @@ body::-webkit-scrollbar {
 
 #links-footer {
     margin-top: 20px;
+    margin-left: 2%;
 }
 
 #links-footer a {
