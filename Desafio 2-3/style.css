@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    --color-green: #50fa7b;
+    --color-orange: rgb(255, 166, 0);
+    --color-rocket: #7159c1;
+    --color-rgba: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    background: #282a36;
+    font-family: roboto;
+    color: white;
+    box-sizing: content-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;    
+}
+
+.footer {
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#282a36;
+ }
+
+.top {
+    background: var(--color-rgba);
+    margin: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-rockt, #links-footer {
+    text-align: center;
+}
+
+.about-rockt img {
+    margin-top: 40px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+}
+
+.about-rockt h1 {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+.about-rockt h5 {
+    color: var(--color-green);
+    font-size: 16px;
+    opacity: 0.5;
+    font-weight: normal;
+}
+
+.about-rockt h3 {
+    margin-top: 20px;
+}
+
+.about-rockt ul {
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    font-family: roboto;
+    margin: 0 30px;
+}
+
+.links a:hover {
+    color: var(--color-green);
+    transition: 0.5s;
+}
+
+#links-footer {
+    margin-top: 20px;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+/* ================= CARDS ================== */
+
+.wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cards {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+.card {
+    border: 3px solid #282a36;
+    text-align: center;
+    border-radius: 5%;
+    background-color: var(--color-rgba);
+    box-shadow: 5px 5px 15px var(--color-rgba);
+    cursor: pointer;
+}
+
+#starter:hover {
+    border: 3px solid var(--color-rocket);
+    transition: 0.5s;
+}
+
+#launchbase:hover {
+    border: 3px solid var(--color-orange);
+    transition: 0.5s;
+}
+
+#gostack:hover {
+    border: 3px solid var(--color-green);
+    transition: 0.5s;
+}
+
+.card_image-container img {
+    margin: 0 auto;
+    padding-top: 20%;
+}
+
+#starter .starter_content p strong {
+    color: var(--color-rocket);
+}
+
+#launchbase .launchbase_content p strong {
+    color: var(--color-orange);
+}
+
+#gostack .gostack_content p strong {
+    color: var(--color-green);
+}
+
+#starter .card_price {
+    color: var(--color-rocket);
+}
+
+#launchbase .card_price {
+    color: var(--color-orange);
+}
+
+#gostack .card_price {
+    color: var(--color-green);
+}
+
+.starter_content, 
+.launchbase_content,
+.gostack_content,
+.card_info {
+    margin-top: 15%;
+    padding: 24px;
+}
+
+.card_price {
+    margin-bottom: 10px;
+}
+/* ============= MODAL ===============*/
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 70%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal {
+    color: black;
+    position: absolute;
+    right: 42px;
+    top: 8px;
+    cursor: pointer;
+}
+
+/* ============= MODAL ACTIVE ===============*/
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+}
