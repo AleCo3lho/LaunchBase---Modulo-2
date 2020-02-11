@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+        {% block head %}
+        <title>Cursos</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% endblock %}
+
+{% block content %}
+        <div class="wrapper">
+            <h1>Cursos</h1>
+        </div>
+
+        <section class="cards">
+
+            {% for item in items %}
+            <div class="card" id="{{item.id}}">
+                <div class="card_image-container">
+                    <img src="{{item.img_src}}" alt="{{item.id}}">
+                </div>
+                <div class="{{item.div_class}}">
+                    <p><strong>{{item.div_content_strong}}</strong>{{item.div_content_br}}<br/>{{item.div_content_br1}}<br/>{{item.div_content_br2}}{{item.div_content_br3}}</p>
+                </div>
+                <div class="card_info">
+                    <p>{{item.card_info}}</p>
+                </div>
+                <div class="card_price">
+                    <p>{{item.card_price}}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </section>
+        
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+                <a class="maximize-modal">
+                    <i class="material-icons">aspect_ratio</i>
+                </a>
+
+                <div class="modal-content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+{% endblock %}

@@ -23,14 +23,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.footer {
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
-    background:#282a36;
- }
-
 .top {
     background: var(--color-rgba);
     margin: none;
@@ -101,8 +93,7 @@ body::-webkit-scrollbar {
 
 .cards {
     max-width: 1300px;
-    margin: 0 auto;
-    margin-top: 2%;
+    margin: 2% auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
@@ -170,7 +161,9 @@ body::-webkit-scrollbar {
 }
 
 .card_price {
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10 auto;
 }
 /* ============= MODAL ===============*/
 
